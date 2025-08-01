@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA - Votre Assistant Virtuel Intelligent pour Windows</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Nova Purple Color */
+        :root {
+            --nova-purple-50: #F5EBFF;
+            --nova-purple-100: #EAD6FF;
+            --nova-purple-200: #D6B3FF;
+            --nova-purple-300: #C28FFF;
+            --nova-purple-400: #AD6BFF;
+            --nova-purple-500: #9947FF;
+            --nova-purple-600: #8523FF;
+            --nova-purple-700: #7000E0; /* Default for buttons/text */
+            --nova-purple-800: #5C00B3; /* For headings */
+            --nova-purple-900: #470085;
+            --nova-purple-950: #33005C;
+        }
+
+        .bg-novaPurple-50 { background-color: var(--nova-purple-50); }
+        .bg-novaPurple-700 { background-color: var(--nova-purple-700); }
+        .hover\:bg-novaPurple-800:hover { background-color: var(--nova-purple-800); }
+        .text-novaPurple-700 { color: var(--nova-purple-700); }
+        .text-novaPurple-800 { color: var(--nova-purple-800); }
+        .text-novaPurple-600 { color: var(--nova-purple-600); }
+
+        /* Basic responsive adjustments for smaller screens if needed, though Tailwind handles much */
+        @media (max-width: 768px) {
+            .lg\:grid-cols-\[1fr_400px\] {
+                grid-template-columns: 1fr;
+            }
+            .lg\:gap-12 {
+                gap: 1.5rem; /* Default gap */
+            }
+            .lg\:order-last {
+                order: initial;
+            }
+            .lg\:mx-0 {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .lg\:text-left {
+                text-align: center;
+            }
+            .lg\:justify-start {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900">
+    <div class="flex flex-col min-h-screen">
+        <header class="px-4 lg:px-6 h-14 flex items-center bg-white border-b">
+            <a href="#" class="flex items-center justify-center">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icone-e3iL6MJjabOFtWvNu09VM2cXiGeUvg.png" alt="NOVA Icon" width="32" height="32" class="mr-2">
+                <span class="text-xl font-bold text-novaPurple-700">NOVA</span>
+                <span class="sr-only">NOVA - Votre Assistant Virtuel</span>
+            </a>
+            <nav class="ml-auto flex gap-4 sm:gap-6">
+                <a href="#features" class="text-sm font-medium hover:underline underline-offset-4">Fonctionnalités</a>
+                <a href="#about" class="text-sm font-medium hover:underline underline-offset-4">À Propos</a>
+                <a href="#download" class="text-sm font-medium hover:underline underline-offset-4">Télécharger</a>
+            </nav>
+        </header>
+
+        <main class="flex-1">
+            <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-novaPurple-50 to-white">
+                <div class="container mx-auto px-4 md:px-6">
+                    <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center">
+                        <div class="flex flex-col justify-center space-y-4">
+                            <div class="space-y-2">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20%282%29-qerSdg8arrVuinfhQHBCsXDh1ZCGcp.png" alt="NOVA Logo" width="200" height="200" class="mx-auto lg:mx-0 mb-4">
+                                <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-center lg:text-left text-novaPurple-800">
+                                    Découvrez NOVA, Votre Assistant Virtuel Intelligent pour Windows
+                                </h1>
+                                <p class="max-w-[600px] text-gray-600 md:text-xl text-center lg:text-left">
+                                    NOVA est un assistant virtuel révolutionnaire conçu pour simplifier votre quotidien sur Windows.
+                                    Gérez vos tâches, obtenez des informations instantanées et automatisez vos routines avec une
+                                    facilité déconcertante.
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2 min-[400px]:flex-row justify-center lg:justify-start">
+                                <a href="#" class="inline-flex h-10 items-center justify-center rounded-md bg-novaPurple-700 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-novaPurple-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-4 w-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                                    Télécharger NOVA (Windows)
+                                </a>
+                            </div>
+                        </div>
+                        <img src="/placeholder.svg?height=400&width=600" width="600" height="400" alt="NOVA Interface Screenshot" class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square">
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="w-full py-12 md:py-24 lg:py-32 bg-white">
+                <div class="container mx-auto px-4 md:px-6">
+                    <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-novaPurple-800">
+                                Fonctionnalités Clés de NOVA
+                            </h2>
+                            <p class="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                NOVA est doté de capacités avancées pour vous offrir une expérience utilisateur inégalée.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+                        <div class="flex flex-col items-center p-6 text-center border rounded-lg shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-novaPurple-600 mb-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            <h3 class="text-xl font-bold mb-2">Intelligence Artificielle</h3>
+                            <p class="text-sm text-gray-600">
+                                NOVA utilise des algorithmes d'IA de pointe pour comprendre vos requêtes et fournir des réponses
+                                pertinentes.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center p-6 text-center border rounded-lg shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-novaPurple-600 mb-4"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                            <h3 class="text-xl font-bold mb-2">Apprentissage Continu</h3>
+                            <p class="text-sm text-gray-600">
+                                Plus vous utilisez NOVA, plus il apprend vos préférences et s'adapte à vos besoins.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center p-6 text-center border rounded-lg shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-novaPurple-600 mb-4"><path d="m3 21 1.9-2.5a1.8 1.8 0 0 1 2.6.1L8.6 21H18a2 2 0 0 0 2-2V8.5L22 7v7a2 2 0 0 1-2 2H8.5L6 18.5a1.8 1.8 0 0 1-2.5-.1L2 21z"/><path d="M14.5 7.5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0 0 1h5z"/></svg>
+                            <h3 class="text-xl font-bold mb-2">Interface Intuitive</h3>
+                            <p class="text-sm text-gray-600">
+                                Interagissez avec NOVA via une interface simple et conviviale, par texte ou par commande vocale.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center p-6 text-center border rounded-lg shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-novaPurple-600 mb-4"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 0 2.73l-.15.1a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1 0-2.73l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                            <h3 class="text-xl font-bold mb-2">Personnalisation Avancée</h3>
+                            <p class="text-sm text-gray-600">
+                                Configurez NOVA pour qu'il réponde parfaitement à votre style de travail et à vos préférences.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center p-6 text-center border rounded-lg shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-novaPurple-600 mb-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                            <h3 class="text-xl font-bold mb-2">Intégration Windows</h3>
+                            <p class="text-sm text-gray-600">
+                                NOVA s'intègre parfaitement à votre système d'exploitation Windows pour une expérience fluide.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center p-6 text-center border rounded-lg shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-novaPurple-600 mb-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            <h3 class="text-xl font-bold mb-2">Mises à Jour Régulières</h3>
+                            <p class="text-sm text-gray-600">
+                                Bénéficiez de nouvelles fonctionnalités et améliorations grâce à des mises à jour fréquentes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="w-full py-12 md:py-24 lg:py-32 bg-novaPurple-50">
+                <div class="container mx-auto px-4 md:px-6">
+                    <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                        <div class="space-y-4">
+                            <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-novaPurple-800">
+                                À Propos de NOVA
+                            </h2>
+                            <p class="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                NOVA a été créé avec la vision de rendre l'interaction avec votre ordinateur plus naturelle et
+                                efficace. Nous croyons que la technologie doit s'adapter à l'utilisateur, et non l'inverse. C'est
+                                pourquoi NOVA est conçu pour être intuitif, puissant et constamment en évolution pour répondre aux
+                                défis du monde numérique.
+                            </p>
+                            <p class="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                Notre équipe est dédiée à l'innovation et à la satisfaction de nos utilisateurs. Nous nous engageons à
+                                fournir un assistant virtuel fiable et performant qui vous aide à maximiser votre productivité et à
+                                simplifier vos tâches quotidiennes.
+                            </p>
+                        </div>
+                        <img src="/placeholder.svg?height=400&width=600" width="600" height="400" alt="About NOVA" class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full">
+                    </div>
+                </div>
+            </section>
+
+            <section id="download" class="w-full py-12 md:py-24 lg:py-32 bg-white text-center">
+                <div class="container mx-auto px-4 md:px-6">
+                    <div class="space-y-4">
+                        <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-novaPurple-800">
+                            Prêt à Essayer NOVA ?
+                        </h2>
+                        <p class="max-w-[700px] mx-auto text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            Téléchargez NOVA dès aujourd'hui et transformez votre façon d'interagir avec votre ordinateur Windows.
+                            C'est rapide, facile et entièrement gratuit !
+                        </p>
+                        <a href="#" class="inline-flex h-12 items-center justify-center rounded-md bg-novaPurple-700 px-10 text-lg font-medium text-white shadow transition-colors hover:bg-novaPurple-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-5 w-5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                            Télécharger NOVA Maintenant
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-white">
+            <p class="text-xs text-gray-500">&copy; 2025 NOVA. Tous droits réservés.</p>
+            <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+                <a href="#" class="text-xs hover:underline underline-offset-4">Politique de Confidentialité</a>
+                <a href="#" class="text-xs hover:underline underline-offset-4">Conditions d'Utilisation</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
